@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-size: 16px;
+}
+
+#but {
+  display: block;
+}
+
+.main-container {
+  /* height: 100vh; */
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  display: flex;
+}
+
+.digit {
+  background: #eee;
+  height: 5.1rem;
+  width: 3rem;
+  margin-right: 1rem;
+
+  position: relative;
+  perspective: 15rem;
+}
+
+.digit.change > div {
+  transition: transform 450ms;
+}
+
+.digit.d-none > * {
+  display: none;
+}
+
+.top,
+.bottom {
+  height: 2.5rem;
+  width: 3rem;
+  border: 0.15rem solid #333;
+  border-radius: 0.5rem;
+
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 2.3rem 4rem;
+
+  transform: rotateX(0deg);
+}
+
+.top {
+  border-bottom: none;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+
+  top: 0;
+  transform-origin: bottom center;
+  background-position: center 0.5rem;
+}
+
+.bottom {
+  border-top: none;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+
+  top: 2.6rem;
+  transform-origin: top center;
+  background-position: center -2rem;
+}
+
+.top.front {
+  background-image: url('img/0.svg');
+  z-index: 2;
+}
+
+.top.back {
+  background-image: url('img/0.svg');
+  z-index: 1;
+}
+
+.bottom.front {
+  background-image: url('img/0.svg');
+  z-index: 2;
+}
+
+.bottom.back {
+  background-image: url('img/0.svg');
+  z-index: 1;
+}
+
+/**
+**
+**
+** Data direction up
+**
+**/
+
+/* 
+* animation transition styles 
+*/
+
+/* start */
+
+.digit[data-direction='up'].start .top.front {
+  transform: rotateX(-90deg);
+}
+
+.digit[data-direction='up'].start .top.back {
+  transform: rotateX(0deg);
+}
+
+.digit[data-direction='up'].start .bottom.front {
+  transform: rotateX(0deg);
+}
+
+.digit[data-direction='up'].start .bottom.back {
+  transform: rotateX(0deg);
+}
+
+/* 
+* background images 
+*/
+
+.digit [data-value='0'] {
+  background-image: url('img/0.svg');
+}
+
+.digit [data-value='1'] {
+  background-image: url('img/1.svg');
+}
+
+.digit [data-value='2'] {
+  background-image: url('img/2.svg');
+}
+
+.digit [data-value='3'] {
+  background-image: url('img/3.svg');
+}
+
+.digit [data-value='4'] {
+  background-image: url('img/4.svg');
+}
+
+.digit [data-value='5'] {
+  background-image: url('img/5.svg');
+}
+
+.digit [data-value='6'] {
+  background-image: url('img/6.svg');
+}
+
+.digit [data-value='7'] {
+  background-image: url('img/7.svg');
+}
+
+.digit [data-value='8'] {
+  background-image: url('img/8.svg');
+}
+
+.digit [data-value='9'] {
+  background-image: url('img/9.svg');
+}

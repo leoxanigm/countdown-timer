@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Countdown Timer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <div id="hour" class="counter" data-value="00">
+          <div
+            class="digit start tens"
+            data-value="0"
+            data-next="1"
+            data-direction="up"
+            data-max="2"
+          >
+            <div class="top back" data-value="0"></div>
+            <div class="top front" data-value="1"></div>
+            <div class="bottom front" data-value="0"></div>
+            <div class="bottom back" data-value="1"></div>
+          </div>
+          <!-- end digit -->
+          <div
+            class="digit start ones"
+            data-value="0"
+            data-next="1"
+            data-direction="up"
+            data-max="4"
+          >
+            <div class="top back" data-value="0"></div>
+            <div class="top front" data-value="1"></div>
+            <div class="bottom front" data-value="0"></div>
+            <div class="bottom back" data-value="1"></div>
+          </div>
+          <!-- end digit -->
+        </div>
+        <!-- end hour -->
+        <div id="minute" class="counter" data-value="00">
+          <div
+            class="digit start tens"
+            data-value="0"
+            data-next="1"
+            data-direction="up"
+            data-max="5"
+          >
+            <div class="top back" data-value="0"></div>
+            <div class="top front" data-value="1"></div>
+            <div class="bottom front" data-value="0"></div>
+            <div class="bottom back" data-value="1"></div>
+          </div>
+          <!-- end digit -->
+          <div
+            class="digit start ones"
+            data-value="0"
+            data-next="1"
+            data-direction="up"
+            data-max="9"
+          >
+            <div class="top back" data-value="0"></div>
+            <div class="top front" data-value="1"></div>
+            <div class="bottom front" data-value="0"></div>
+            <div class="bottom back" data-value="1"></div>
+          </div>
+          <!-- end digit -->
+        </div>
+        <!-- end minute -->
+        <div id="second" class="counter" data-value="00">
+          <div
+            class="digit start tens"
+            data-value="0"
+            data-next="1"
+            data-direction="up"
+            data-max="5"
+          >
+            <div class="top back" data-value="0"></div>
+            <div class="top front" data-value="1"></div>
+            <div class="bottom front" data-value="0"></div>
+            <div class="bottom back" data-value="1"></div>
+          </div>
+          <!-- end digit -->
+          <div
+            class="digit start ones"
+            data-value="0"
+            data-next="1"
+            data-direction="up"
+            data-max="9"
+          >
+            <div class="top back" data-value="0"></div>
+            <div class="top front" data-value="1"></div>
+            <div class="bottom front" data-value="0"></div>
+            <div class="bottom back" data-value="1"></div>
+          </div>
+          <!-- end digit -->
+        </div>
+        <!-- end second -->
+      </div>
+      <button id="but">Start</button>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
